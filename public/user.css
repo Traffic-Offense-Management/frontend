@@ -1,0 +1,23 @@
+.user{
+    display: flex;
+    flex-direction: row;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-option{
+    padding: 0.5rem;
+    margin: 1rem;
+    background-color: #EEEEEE;
+    color: black;
+
+}
+
+.menu-option:hover, .menu-option:focus, .menu-option:active{
+
+    background-color: #E0E0E0;
+    text-decoration: none;
+}
