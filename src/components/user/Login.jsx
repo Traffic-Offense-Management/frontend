@@ -7,14 +7,14 @@ const Login = () => {
 
     return ( 
         <div>
-            <form action='/profile'>
+            <form action='/user/profile'>
                 <div>
                     <label>Username : </label>
-                    <input type='text'></input>
+                    <input type='text'/>
                 </div>
                 <div>
                     <label>Password : </label>
-                    <input type='password'></input>
+                    <input type='password'/>
                 </div>
                 <button type='submit'>Submit</button>
             </form>

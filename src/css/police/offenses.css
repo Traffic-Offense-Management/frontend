@@ -1,0 +1,18 @@
+.offenses{
+    display: flex;
+    flex-direction: row;
+}
+
+.list-offense{
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+th{
+    background-color: white;
+    padding: 1rem !important;
+}
+
+.my-bg{
+    background-color: #EEEEEE;
+}

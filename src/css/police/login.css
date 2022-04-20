@@ -1,0 +1,35 @@
+.login-form{
+    text-align: center;
+    margin: 2rem;
+}
+
+.form-control{
+    display: inline-block;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+
+.form-label{
+    margin: 0.5rem 1rem;
+}
+
+.field{
+    margin: 1rem;
+}
+
+table{
+    text-align: center !important;
+}
+
+tbody{
+    margin: auto;
+    text-align: center;
+}
+
+.my-bg{
+    background-color: #EEEEEE;
+}

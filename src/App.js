@@ -1,23 +1,40 @@
-import Dashboard from "./components/Dashboard";
-import Login from "./components/Login";
+import Login from "./components/user/Login";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Complaints from "./components/Complaints";
-import Offenses from "./components/Offenses";
-import Profile from "./components/Profile";
+import PoliceLogin from './components/police/PoliceLogin'
+import History from './components/police/History'
+import PoliceProfile from './components/police/PoliceProfile'
+import RegisterOffence from './components/police/RegisterOffence'
+import ListOffenses from './components/police/ListOffenses'
+
+import React, { Component } from 'react';
+
+import { BrowserRouter,Routes, Route } from "react-router-dom";
+import Complaints from "./components/user/Complaints";
+import Offenses from "./components/user/Offenses";
+import Profile from "./components/user/Profile";
+import RegisterComplaint from "./components/user/RegisterComplaint";
+import Towing from "./components/police/Towing";
 
 function App() {
 
   return (
-    <Router>
-        <Routes>
+    <BrowserRouter>
+      <Routes>
           <Route exact path="/" element={<Login />}></Route>
-          <Route exact path="/login" element={<Login />}></Route>
-          <Route exact path="/profile" element={<Profile />}></Route>
-          <Route exact path="/offenses" element={<Offenses />}></Route>
-          <Route exact path="/complaints" element={<Complaints />}></Route>
+          <Route exact path="/user/login" element={<Login />}></Route>
+          <Route exact path="/user/profile" element={<Profile />}></Route>
+          <Route exact path="/user/offenses" element={<Offenses />}></Route>
+          <Route exact path="/user/complaints" element={<Complaints />}></Route>
+          <Route exact path="/user/complaints/register" element={<RegisterComplaint />}></Route>
+
+          <Route exact path="/police/login" element={<PoliceLogin />}></Route>
+          <Route exact path="/police/profile/:policeId" element={<PoliceProfile />}></Route>
+          <Route exact path="/police/offenses/history" element={<History />}></Route>
+          <Route exact path="/police/offenses/new" element={<RegisterOffence />}></Route>
+          <Route exact path="/police/offenses/list" element={<ListOffenses />}></Route>
+          <Route exact path="/police/towing/new" element={<Towing />}></Route>
         </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
