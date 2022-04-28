@@ -2,12 +2,14 @@ import axios from 'axios';
 import React, { Component, useEffect, useState } from 'react';
 import {useHistory, useNavigate} from 'react-router-dom'
 import {withRouter} from 'react-router-dom';
+
 import '../../css/police/login.css';
 
 const PoliceLogin = () => {   
     
     const navigate = useNavigate();
 
+    
     function handleSubmit(e) {
         
         console.log('Form submitted');
@@ -26,8 +28,10 @@ const PoliceLogin = () => {
                 console.log(response)
                 // alert('Login successful');
                 localStorage.setItem('username', username);
+                localStorage.setItem('police_id', response.data.policeId);
                 console.log((localStorage.getItem('username')));  
-                navigate(`/police/profile/${response.data.policeId}`);
+                console.log((localStorage.getItem('police_id')));  
+                navigate(`/police/profile`);
             }).catch(err => {
                 alert('Invalid username or password');
                 console.log(err.message)

@@ -3,16 +3,24 @@ import axios from 'axios'
 import Menu from './Menu';
 import '../../css/police/profile.css';
 import logo from '../../images/police-logo.png';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const PoliceProfile = () => {
 
     console.log(useParams());
-    let {policeId} = useParams(); 
 
     const [policeDetails, setPoliceDetails] = useState([]);
 
+    let policeId;
+    const navigate = useNavigate();
+
     useEffect(() => {
+        let username = localStorage.getItem('username');
+        policeId = localStorage.getItem('police_id');
+        console.log('police id ', policeId);
+        if(!policeId){
+            navigate('/police/login');
+        }
         axios.get(`http://localhost:8080/police/${policeId}`)
         .then(res => {
             const policeDetails = res.data[0]

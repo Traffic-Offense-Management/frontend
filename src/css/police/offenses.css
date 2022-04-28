@@ -11,8 +11,16 @@
 th{
     background-color: white;
     padding: 1rem !important;
+    text-align: left;
+    border-bottom: none;
+}
+
+thead{
+    border-bottom: none;
 }
 
 .my-bg{
     background-color: #EEEEEE;
 }
+
+

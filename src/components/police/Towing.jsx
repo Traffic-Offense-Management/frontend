@@ -3,6 +3,7 @@ import '../../css/police/towing.css'
 import axios from 'axios';
 import Menu from './Menu';
 import OffenseDropdown from './OffensesDropdown';
+import TowingOffensesDropdown from './TowingOffensesDropwdown';
 import Stations from './Stations';
 
 
@@ -32,6 +33,7 @@ class Towing extends Component{
         let body = {
             vehicle_no : document.getElementById('vehicle-no').value,
             police_id : 10004,
+            offense_no : document.getElementById('offense-no').value,
             station_id : document.getElementById('police-station-id').value,
             place : document.getElementById('place').value,
             time : this.getDateTime()
@@ -62,9 +64,7 @@ class Towing extends Component{
         
                         <table className='new-offense-form-table'>
                             <tbody>
-        
                                 <tr>
-                                    
                                     <td>
                                         <label htmlFor="">Vehicle No</label>
                                     </td>
@@ -80,6 +80,16 @@ class Towing extends Component{
                                     </td>
                                     <td>
                                         <input required type="text" name="" id="place" className='towing-input form-control'/>
+                                    </td>                            
+                                </tr>
+
+                                <tr>
+                                    
+                                    <td>
+                                        <label htmlFor="">Offense</label>
+                                    </td>
+                                    <td>
+                                        <TowingOffensesDropdown></TowingOffensesDropdown>
                                     </td>                            
                                 </tr>
 

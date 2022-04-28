@@ -26,11 +26,10 @@ const ListOffenses = () => {
             <Menu selected='offense-list'/>
 
             <div className='list-offense'>
-                <table className='table table-bordered'>
+                <table className='table'>
                     <thead>
                         <tr>
-                            <th>Offense No</th>
-                            <th>Description</th>
+                            <th>Offense</th>
                             <th>Fine / Punishment</th>
                         </tr>
                     </thead>
@@ -39,7 +38,6 @@ const ListOffenses = () => {
                         {offenses.map(offense => {
                             return (
                                 <tr key={offense.offense_no}>
-                                    <td>{offense.offense_no}</td>
                                     <td>{offense.description}</td>
                                     <td>{offense.fine}</td>
                                 </tr>

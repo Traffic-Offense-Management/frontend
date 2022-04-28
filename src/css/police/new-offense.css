@@ -38,7 +38,7 @@ td{
 .offense-input{
     /* border: 1px solid black;
     padding: 0.2rem; */
-    min-width: 60% !important;
+    min-width: 100% !important;
 }
 
 .offense-input:active, .offense-input:focus{
