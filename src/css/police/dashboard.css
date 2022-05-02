@@ -1,0 +1,47 @@
+.dashboard{
+    margin: 1rem;
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.center{
+    text-align: center;
+}
+
+.cards-with-title{
+    margin: 1rem 0;
+}
+
+.cards-title{
+
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem 0;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 5px 5px 10px #EEEEEE;
+    margin: 1rem 2rem 1rem 0;
+    padding: 1rem;
+}
+
+.dashboard-icon{
+    font-size: 3rem;
+}
+
+.info{
+    margin: 1rem;
+}
+
+.detail{
+    float: right;
+}

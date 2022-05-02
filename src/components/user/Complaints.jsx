@@ -19,8 +19,10 @@ const Complaints = () =>  {
 
         <div className='user'>
             <Menu />
-            
             <div className="complaints">
+                <div>
+                    <a className='btn btn-outline-primary mt-3 mb-3' href='/user/complaints/register'>New</a>
+                </div>
                 <table className='table table-bordered'>
                     <thead>
                         <tr>

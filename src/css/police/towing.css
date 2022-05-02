@@ -1,0 +1,45 @@
+
+
+select{
+    padding: 0.3rem;
+}
+
+tr{
+    margin: 0.4rem;
+}
+
+td{
+    text-align: left;
+    padding: 0.4rem;
+    font-size: large;
+}
+
+.new-offense{
+    display: flex;
+    flex-direction: row;
+}
+
+.new-offense-form{
+    margin: 1rem;
+    flex-grow: 1;
+    justify-content: center;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.submit-btn{
+    margin: auto;
+    margin-top: 0.4rem;
+}
+
+.towing-input{
+    width: 100%;
+    /*display: inline-block;*/
+    margin: 0.5rem;
+}
+
+
+.my-bg{
+    background-color: #EEEEEE;
+}

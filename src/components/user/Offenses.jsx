@@ -4,6 +4,7 @@ import Menu from './Menu';
 
 const Offenses = () => {
 
+
     const [offenses, setOffenses] = useState([]);
 
     useEffect(() => {
@@ -24,7 +25,6 @@ const Offenses = () => {
 
             <div className='user'>
                 <Menu />
-
                 <div>
                     <table className='table table-bordered'>
                         <thead>
@@ -54,9 +54,7 @@ const Offenses = () => {
                     </table>
                 </div>
             </div>
-                
-                
-            </div>
+        </div>
     )
 
 }

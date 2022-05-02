@@ -1,0 +1,41 @@
+.police{
+    display: flex;
+    flex-direction: row;
+}
+
+.police-image{
+    width: 200px;
+    height: 200px;
+    margin: 2rem 4rem;
+}
+
+.profile{
+    margin: 1rem;
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+td{
+    padding: 0.6rem !important;
+    background-color: white;
+    border-top: none !important;
+}
+
+.field{
+    font-weight: bold;
+}
+
+
+tr{
+    margin: 2px;
+}
+
+.my-bg{
+    background-color: #EEEEEE;
+}
+
+

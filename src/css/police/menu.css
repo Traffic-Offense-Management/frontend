@@ -1,0 +1,45 @@
+.link{
+    text-decoration: none !important;
+    color: black;
+
+}
+.menu{
+    /*margin: 01rem 0.5rem;*/
+    /*position: fixed;*/
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 100vh;
+    border-radius: 0.4rem;
+    box-shadow: 10px 10px 10px #EEEEEE;
+}
+
+.link:hover{
+    color: black;
+
+}
+
+.menu-option{
+    cursor: pointer;
+    padding: 1rem;
+
+}
+
+.menu-option:hover{
+    background-color: #E0E0E0;
+}
+
+.menu-option:focus{
+    clip-path: inset();
+}
+
+.selected{
+    background-color: #757575;
+    color: white !important;
+}
+
+.selected:hover{
+    background-color: #757575;
+    color: white !important;
+}

@@ -1,0 +1,19 @@
+.heading{
+    background-color: #212121;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    /* top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 10;  */
+  }
+
+.user-logo{
+    float: right;
+}
+
+.inline-block{
+    display: inline-block;
+}
