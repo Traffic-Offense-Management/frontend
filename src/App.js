@@ -15,6 +15,7 @@ import Profile from "./components/user/Profile";
 import RegisterComplaint from "./components/user/RegisterComplaint";
 import Towing from "./components/police/Towing";
 import Dashboard from "./components/police/Dashboard";
+import Admin from "./components/admin/Admin"
 
 
 
@@ -38,6 +39,7 @@ function App() {
               <Route exact path="/police/offenses/new" element={<RegisterOffence />}></Route>
               <Route exact path="/police/offenses/list" element={<ListOffenses />}></Route>
               <Route exact path="/police/towing/new" element={<Towing />}></Route>
+              <Route exact path="/admin" element={<Admin/>}></Route>
             </Routes>
         </BrowserRouter>
   );
