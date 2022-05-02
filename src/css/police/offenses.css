@@ -12,15 +12,20 @@ th{
     background-color: white;
     padding: 1rem !important;
     text-align: left;
-    border-bottom: none;
+    border: none !important;
+    font-size: large;
 }
 
 thead{
-    border-bottom: none;
+    border: none;
 }
 
 .my-bg{
     background-color: #EEEEEE;
+}
+
+table{
+    border: none;
 }
 
 

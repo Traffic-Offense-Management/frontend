@@ -4,9 +4,10 @@ import {useHistory, useNavigate} from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import Menu from './Menu';
 import '../../css/police/offense-history.css'
+import Header from "./Header";
 
 
-const History = (props) => {
+const OffenseRecords = (props) => {
 
     console.log(useParams());
     
@@ -39,8 +40,8 @@ const History = (props) => {
     }
 
     useEffect(() => {
-        let username = localStorage.getItem('username');
-        policeId = localStorage.getItem('police_id');
+        let username = sessionStorage.getItem('username');
+        policeId = sessionStorage.getItem('police_id');
         console.log('police id ', policeId);
         if(!policeId){
             navigate('/police/login');
@@ -56,14 +57,15 @@ const History = (props) => {
     }, []);
 
     return (
-        <div className='my-bg'>
+        <div className=''>
+            <Header></Header>
             <div className='history'>
                 <Menu selected='history'/>
                 <div className='offense-history'>
-                <div className='num-offenses bg-primary text-white'>
+                <div className={'num-offenses ' + (offenses.length == 0 ? "bg-danger" : "bg-success") + ' text-white'}>
                     {offenses.length > 0 ? offenses.length : "No"} record(s) found
                 </div>
-                {offenses.length > 0 ? offenses.map(offense => {
+                {offenses.map(offense => {
 
                     return(     
                     <div className='offense'>
@@ -85,7 +87,7 @@ const History = (props) => {
                             </div>
                             <div className="time">
                                 <i class="bi bi-calendar"></i>
-                                <small>{offense.time.split('T')[0]}</small>
+                                <small>{offense.date.split('T')[0]}</small>
                             </div>
                         </div>
 
@@ -94,10 +96,7 @@ const History = (props) => {
                         </div>
                     </div>
                     )
-                    }) : 
-                    (<div className='no-records'>
-                        No records found
-                    </div>)
+                    })
                 }                    
                 </div>
 
@@ -105,17 +104,17 @@ const History = (props) => {
                     <h5 htmlFor="" >Filter By</h5><br></br>
                     <div className="filter-field">
                         <label htmlFor="">Name</label><br></br>
-                        <input type="text" id="filter-name" onChange={filter} placeholder='Enter name'/>
+                        <input type="text" id="filter-name" onChange={filter} className='filter-input' placeholder='Enter name'/>
                     </div>
                     <div className="filter-field">
                         <label htmlFor="">Place</label><br></br>
-                        <input type="text" id="filter-place" onChange={filter} placeholder='Enter place'/>
+                        <input type="text" id="filter-place" onChange={filter} className='filter-input' placeholder='Enter place'/>
                     
                     </div>
 
                     <div className="filter-field">
                         <label htmlFor="">Vehicle Number</label><br></br>
-                        <input type="text" id="filter-vehicle" onChange={filter} placeholder='Enter vehicle number'/>
+                        <input type="text" id="filter-vehicle" onChange={filter} className='filter-input' placeholder='Enter vehicle number'/>
                     
                     </div>
                     
@@ -136,4 +135,4 @@ const History = (props) => {
 
 }
 
-export default History;
+export default OffenseRecords;

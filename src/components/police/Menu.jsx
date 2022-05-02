@@ -14,11 +14,16 @@ class Menu extends Component{
         return (
             <div>
                 <div className="menu">
+                    <div className={'menu-option ' + (this.props.selected == 'dashboard' ? 'selected' : " ")}>
+                        <Link to='/police/dashboard'
+                              className={'link ' + (this.props.selected == 'dashboard' ? 'selected' : " ")}>
+                           <i className="bi bi-speedometer2"></i>Dashboard</Link>
+                    </div>
                     <div className={'menu-option ' + (this.props.selected == 'profile' ? 'selected' : " ")}>
                         <Link to='/police/profile' className={'link ' + (this.props.selected == 'profile' ? 'selected' : " ")}><i class="bi bi-person"></i>Profile</Link>
                     </div>
                     <div className={'menu-option ' + (this.props.selected == 'history' ? 'selected' : " ")}>
-                        <Link to='/police/offenses/history' className={'link ' + (this.props.selected == 'history' ? 'selected' : " ")}><i class="bi bi-card-list"></i>Offense History</Link>
+                        <Link to='/police/offenses/history' className={'link ' + (this.props.selected == 'history' ? 'selected' : " ")}><i class="bi bi-card-list"></i>Offense Records</Link>
                     </div>
                     <div className={'menu-option ' + (this.props.selected == 'new-offense' ? 'selected' : " ")}>
                         <Link to='/police/offenses/new' className={'link ' + (this.props.selected == 'new-offense' ? 'selected' : " ")}><i class="bi bi-plus-lg"></i>New Offense</Link>

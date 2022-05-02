@@ -1,0 +1,12 @@
+.logo-img{
+    width: 40px;
+    margin-right: 0.3rem;
+}
+
+.user-logo{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-right: 0.6rem;
+    cursor: pointer;
+}

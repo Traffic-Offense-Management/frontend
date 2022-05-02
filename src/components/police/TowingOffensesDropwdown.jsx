@@ -1,6 +1,7 @@
 import React, { Component, useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
+import '../../css/police/towing.css'
 
 const TowingOffensesDropdown = () => {
 
@@ -12,8 +13,8 @@ const TowingOffensesDropdown = () => {
 
     useEffect(() => {
 
-        let username = localStorage.getItem('username');
-        policeId = localStorage.getItem('police_id');
+        let username = sessionStorage.getItem('username');
+        policeId = sessionStorage.getItem('police_id');
         console.log('police id ', policeId);
         if(!policeId){
             navigate('/police/login');
@@ -30,7 +31,7 @@ const TowingOffensesDropdown = () => {
     return (
 
         <div>
-            <select name="" id="offense-no"  className='towing-input form-control'>
+            <select name="" id="offense-no"  className='offense-input form-control'>
                 {offenses.map(offense => {
                     return (
                         <option value={offense.offense_no}>{offense.description}</option>

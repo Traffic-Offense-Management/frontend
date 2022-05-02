@@ -23,6 +23,7 @@
     padding: 0.8rem;
     border-radius: 0.5rem;
     align-items: center;
+    border: 2px solid #EEEEEE;
 }
 
 .fine-no{
@@ -68,9 +69,10 @@ i{
 }
 
 .filter{
-    margin: 1rem;
-    padding: 1rem;
+    margin: 0 1rem;
+    padding: 2rem 1.5rem;
     background-color: white;
+    border-left: 2px solid #EEEEEE;
 }
 
 .no-records{
@@ -101,4 +103,8 @@ i{
 
 .filter-header{
     margin: 1rem 0;
+}
+
+.filter-input{
+    /*padding: 0.3rem;*/
 }

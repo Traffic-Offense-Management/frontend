@@ -1,5 +1,6 @@
 import React, { Component, useEffect, useState } from 'react';
 import axios from 'axios';
+import '../../css/police/towing.css'
 
 const Stations = () => {
 
@@ -19,7 +20,7 @@ const Stations = () => {
     return (
 
         <div>
-            <select name="" id="police-station-id" className='towing-input form-control'>
+            <select name="" id="police-station-id" className='offense-input form-control'>
                 {policeStations.map(station => {
                     return (
                         <option value={station.station_id}>{station.station_name}</option>

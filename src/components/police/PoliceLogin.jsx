@@ -4,6 +4,7 @@ import {useHistory, useNavigate} from 'react-router-dom'
 import {withRouter} from 'react-router-dom';
 
 import '../../css/police/login.css';
+import Header from "./Header";
 
 const PoliceLogin = () => {   
     
@@ -27,10 +28,10 @@ const PoliceLogin = () => {
             .then(response => {
                 console.log(response)
                 // alert('Login successful');
-                localStorage.setItem('username', username);
-                localStorage.setItem('police_id', response.data.policeId);
-                console.log((localStorage.getItem('username')));  
-                console.log((localStorage.getItem('police_id')));  
+                sessionStorage.setItem('username', username);
+                sessionStorage.setItem('police_id', response.data.policeId);
+                console.log((sessionStorage.getItem('username')));  
+                console.log((sessionStorage.getItem('police_id')));  
                 navigate(`/police/profile`);
             }).catch(err => {
                 alert('Invalid username or password');
@@ -38,26 +39,31 @@ const PoliceLogin = () => {
             })
     }
 
-    return ( 
-        <div className='login-form '>
-            <form onSubmit={handleSubmit}>
+    return (
 
-                <h4>Sign In</h4>
-                <div className="form">
+        <div>
+            <Header loginPage={true}></Header>
+            <div className='login-form '>
+                <form onSubmit={handleSubmit}>
 
-                    <div className="field">
-                        <label htmlFor="" className='form-label'>Username</label>
-                        <input type="text" name="" id="username" className='form-control'/>
+                    <h4>Sign In</h4>
+                    <div className="form">
+
+                        <div className="field">
+                            <label htmlFor="" className='form-label'>Username</label>
+                            <input type="text" name="" id="username" className='form-control'/>
+                        </div>
+                        <div className="field">
+                            <label htmlFor="" className='form-label'>Password</label>
+                            <input type="password" name="" id="password"  className='form-control'/>
+                        </div>
                     </div>
-                    <div className="field">
-                        <label htmlFor="" className='form-label'>Password</label>
-                        <input type="password" name="" id="password"  className='form-control'/>
-                    </div>
-                </div>
-                
-                <button className='btn btn-danger' type='submit'>Submit</button>
-            </form>
+
+                    <button className='btn btn-danger' type='submit'>Submit</button>
+                </form>
+            </div>
         </div>
+
         
      );
 

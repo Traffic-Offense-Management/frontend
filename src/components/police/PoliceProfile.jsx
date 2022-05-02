@@ -4,6 +4,7 @@ import Menu from './Menu';
 import '../../css/police/profile.css';
 import logo from '../../images/police-logo.png';
 import { useParams, useNavigate } from 'react-router-dom';
+import Header from "./Header";
 
 const PoliceProfile = () => {
 
@@ -15,8 +16,8 @@ const PoliceProfile = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        let username = localStorage.getItem('username');
-        policeId = localStorage.getItem('police_id');
+        let username = sessionStorage.getItem('username');
+        policeId = sessionStorage.getItem('police_id');
         console.log('police id ', policeId);
         if(!policeId){
             navigate('/police/login');
@@ -32,7 +33,8 @@ const PoliceProfile = () => {
 
     return (
 
-        <div className="my-bg">
+        <div className="">
+            <Header></Header>
             <div className='police'>
 
                 <Menu selected="profile" policeId={policeId}/>

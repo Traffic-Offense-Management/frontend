@@ -4,12 +4,15 @@
 
 }
 .menu{
-    margin: 01rem 0.5rem;
+    /*margin: 01rem 0.5rem;*/
+    /*position: fixed;*/
+    padding-top: 1rem;
     display: flex;
     flex-direction: column;
     background-color: white;
     height: 100vh;
     border-radius: 0.4rem;
+    box-shadow: 10px 10px 10px #EEEEEE;
 }
 
 .link:hover{
