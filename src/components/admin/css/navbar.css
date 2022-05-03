@@ -97,7 +97,7 @@ nav {
     background-position: 100% 100%;
 }
 
-.center {
+.extra-center {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -130,9 +130,10 @@ nav {
     -webkit-font-smoothing: antialiased;
 }
 
-.menu{
+.admin-menu{
     overflow: hidden;
     transition: all .3s ease-in-out;
+    border-radius: 0px;
 }
 
 
@@ -149,7 +150,7 @@ nav {
     transition: .3s;
 }
 
-.menu:hover .ico-menu .bar:after{left:0}
+.admin-menu:hover .ico-menu .bar:after{left:0}
 
 /* .bar:nth-child(1) {
     top: 0px;
