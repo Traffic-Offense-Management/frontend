@@ -37,7 +37,11 @@ function PubHome() {
 
 
             <div className="con">
-                <div className="head">User Complaints/Feedbacks</div>
+                <div className='headeruser'>
+                    <div className='home'><Link to='/'>Home</Link></div>
+                    <div className="head">User Complaints/Feedbacks</div>
+                </div>
+
 
                 <div className="im"><img src={require('./t1.png')} alt="" className="ima"/></div>
 

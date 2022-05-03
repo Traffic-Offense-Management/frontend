@@ -10,3 +10,14 @@
     margin-right: 0.6rem;
     cursor: pointer;
 }
+
+.mainpage{
+    color: white;
+    float: left;
+    margin-top: 0.5rem;
+}
+
+.home-link, .home-link:hover{
+    color: white;
+}
+
