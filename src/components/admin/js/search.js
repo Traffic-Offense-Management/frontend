@@ -1,6 +1,6 @@
 import React from "react"
 import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from "reactstrap";
-import "../css/search.css"
+import "../css/search.scss"
 import { AiOutlineSearch } from "react-icons/ai"
 import { navpages} from "./list"
 export default function Searchbar(props) {
@@ -18,6 +18,8 @@ export default function Searchbar(props) {
     })
     let options = props.options===2 ? (<><button className="ed-buttons">Add {navpages[props.pageContent -1]}</button><button className="ed-buttons">Remove {navpages[props.pageContent -1]}</button></>) : props.options ===1 ? (<button className="ed-buttons">Add {navpages[props.pageContent -1]}</button>) : (<></>)
     return (
+
+        <div className="searchadmin">
         <div className="wrap">
             <div className="search-selector">
                 <Dropdown isOpen={dropdownOpen} toggle={toggle}>
@@ -37,6 +39,7 @@ export default function Searchbar(props) {
                 {options}
                 
             </div>
+        </div>
         </div>
     )
 }

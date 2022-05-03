@@ -1,8 +1,10 @@
 import gear from "../images/gear.png"
-import "../css/navbar.css"
+import "../css/navbar.scss"
 import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Navbar(props) {
     return (
+        <>
+        <div className="navadmin">
         <nav className="navbar navbar-expand" role="navigation">
             <div className="home left-block-width nav-element nav-element-white menu admin-menu" onClick={props.menuClick}>
                     <div className="ico-menu center extra-center">
@@ -18,5 +20,7 @@ export default function Navbar(props) {
             <div className="logout nav-element nav-element-dark "><div className="center extra-center">Logout</div></div>
 
         </nav>
+        </div>
+        </>
     )
 }

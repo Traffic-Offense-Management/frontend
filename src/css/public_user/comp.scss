@@ -1,0 +1,76 @@
+div.con{  
+    // body{
+    //     background-image: url("roles.png");
+    //     background-repeat: no-repeat;
+    //     background-size: cover;
+    // }
+    
+    *{
+        // background-color: #F5EEDC;
+        // background-color: #EEEEEE;
+    }
+    .head{
+        color: black;
+        background-color: orange;
+        text-align: center;
+        font-size: 8vh;
+    }
+
+    .box{
+        padding: 6vh;
+    }
+
+    .PoNa,.Re,.des,.Pro{
+        padding: 4vh;
+    }
+
+    input {
+        padding:1.3vh;
+        border: 0px solid white;
+    }
+
+    .des input{
+        padding: 10vh;
+        max-width: 50%;
+        min-width: 25%;
+    }
+
+    // .fi{
+    //     width: 500px;
+    //     height: 25vh ;
+    // }
+
+    .form-group{
+        padding-top: 2vh;
+    }
+
+    #ab1{
+        padding: 4vh;
+    }
+
+    button{
+        width: 10%;
+        height: 10%;
+        background-color: green;
+    }
+
+    button:hover{
+        transform: scale(1.2);
+        transition: transform 0.6s;
+    }
+
+    .new{
+        padding: 3vh;
+    }
+
+   
+
+    
+
+
+
+
+    // .fi{
+    //     border: 2px solid black;
+    // }
+}
