@@ -39,9 +39,15 @@
         }
 
         .home{
-          font-size: 4vh;
-          margin: 4vh 0vh 0vh 1vh;
+          font-size: 3vh;
+          margin: 2vh 0vh 0vh 1vh;
           float: left;
+            border: 2px solid black;
+            padding: 1vh;
+            border-radius: 3px;
+        }
+
+        .home:hover, .home:focus, .home:active{
         }
     
         
@@ -84,10 +90,15 @@
             
         }
 
+    .my-user-logo{
+        margin: 30px 0 0 30px;
+    }
+
         .cont{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr;
+            border: 2px solid black;
         }
     
         .box1{
@@ -110,6 +121,8 @@
         .bodyuser{
             padding-left:4vh ;
             font-size: 3vh;
+            border: 2px solid black;
+            margin: 3vh;
             
         }
 
@@ -119,7 +132,8 @@
     
         .field{
             display: inline-block;
-            min-width: 30px;
+            min-width: 90px;
+            max-width: 90px;
         }
     
         /* // .cap{
@@ -169,6 +183,8 @@
         .oi{
             font-weight: bold;
             font-size: 4vh;
+            padding: 2vh;
+            color: red;
         }
     
     

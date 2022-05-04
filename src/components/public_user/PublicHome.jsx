@@ -19,10 +19,10 @@ function PubHome() {
 
         const username = localStorage.getItem('username');
         console.log('police id ', username);
-        axios.get(`http://localhost:8080/user/${username}`)
+        axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/user/${username}`)
             .then(res => {
                 const userdetails = res.data[0]
-                console.log(userdetails.dob);
+                console.log(userdetails);
                 // console.log(userdetails);
                 setuserdetails(userdetails);
             })
@@ -55,20 +55,26 @@ function PubHome() {
 
                     <div className="new">
                         <div className="cont">
-                            <div className="imag"><img src={require('./t3.jpg')} alt="" /></div>
+                            <div className="imag"><img src={require('./t3.jpg')} className='my-user-logo' alt="" /></div>
 
                             <div className="box">
 
 
 
 
-                                <div className="field">UserID: </div><div className="usr inp">{userdetails.user_id}</div>
+                                {/*<div className="field">UserID</div><div className="usr inp">{userdetails.user_id}</div>*/}
+                                {/*<br />*/}
+                                <div className="field">Name </div><div className="na inp">{userdetails.name}</div>
                                 <br />
-                                <div className="field">Name: </div><div className="na inp">{userdetails.name}</div>
+                                <div className="field">Address </div><div className="addr inp">{userdetails.address}</div>
                                 <br />
-                                <div className="field">Address: </div><div className="addr inp">{userdetails.address}</div>
+                                <div className="field">Vehicle No </div><div className="dat inp">{userdetails.vehicle_no}</div>
                                 <br />
-                                <div className="field">Date: </div><div className="dat inp">{day}-{mon}-{ye}</div>
+                                <div className="field">DL No </div><div className="dat inp">{userdetails.dl_no}</div>
+                                <br />
+                                <div className="field">Phone </div><div className="dat inp">{userdetails.phone}</div>
+
+                                {/*<div className="field">Date: </div><div className="dat inp">{day}-{mon}-{ye}</div>*/}
                                 <br />
                             </div>
 

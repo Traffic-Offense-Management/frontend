@@ -53,7 +53,7 @@ const Historye = (props) => {
             <div className='history'>
                 {/* <Menu selected='history'/> */}
                 <div className='offense-history'>
-                <div className='num-offenses bg-primary text-white'>
+                <div className='num-offenses bg-light '>
                     {offenses.length > 0 ? offenses.length : "No"} record(s) found
                 </div>
                 {offenses.length > 0 ? offenses.map(offense => {
