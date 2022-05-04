@@ -49,8 +49,8 @@ const Dashboard = () => {
                         <div className='cards-title'>
                             Today
                         </div>
-                        <div className='cards'>
-                            <div className='card'>
+                        <div className='dashboard-cards'>
+                            <div className='dashboard-card'>
                                 <div className='fig'>
                                     <i className="bi bi-clock-history dashboard-icon"></i>
                                 </div>
@@ -60,7 +60,7 @@ const Dashboard = () => {
                                 </div>
                             </div>
 
-                            <div className='card'>
+                            <div className='dashboard-card'>
                                 <div className='fig'>
                                     <i className="fa fa-rupee dashboard-icon"></i>
                                 </div>
@@ -76,8 +76,8 @@ const Dashboard = () => {
                         <div className='cards-title'>
                             This month
                         </div>
-                        <div className='cards'>
-                            <div className='card'>
+                        <div className='dashboard-cards'>
+                            <div className='dashboard-card'>
                                 <div className='fig'>
                                     <i className="bi bi-clock-history dashboard-icon"></i>
                                 </div>
@@ -87,7 +87,7 @@ const Dashboard = () => {
                                 </div>
                             </div>
 
-                            <div className='card'>
+                            <div className='dashboard-card'>
                                 <div className='fig'>
                                     <i className="fa fa-rupee dashboard-icon"></i>
                                 </div>
