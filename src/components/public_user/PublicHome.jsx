@@ -95,13 +95,14 @@ function PubHome() {
                 {/* <div className="srr" id="userd>{getBody(body)}</div> */}
 
                 <div className="bodyuser">
-                    <div className="oi">Something Important, have a look at this</div>
+
+                    <div className="oi"><i className="bi bi-exclamation-triangle"></i>Something Important, have a look at this</div>
                     <br />
                     <div className="headuser">Factors which should be kept in mind to avoid road traffic injuries:-</div>
 
                     <ol>
                         <li>Enforcement plays an important role to the success of road safety laws</li>
-                        <li>Reduce speed</li>
+                        <li>Reduce speed while driving</li>
                         <li>Increasing motorcycle crash helmet use</li>
                         <li>Stop drink and drug - driving</li>
                         <li>Increase seat-belt use</li>
