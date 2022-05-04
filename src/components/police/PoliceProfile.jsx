@@ -22,7 +22,7 @@ const PoliceProfile = () => {
         if(!policeId){
             navigate('/police/login');
         }
-        axios.get(`http://localhost:8080/police/${policeId}`)
+        axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/police/${policeId}`)
         .then(res => {
             const policeDetails = res.data[0]
             console.log(policeDetails.dob);

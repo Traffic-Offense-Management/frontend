@@ -11,7 +11,7 @@ const ListOffenses = () => {
     const [offenses, setOffenses] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/offenses`)
+        axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/offenses`)
         .then(res => {
             const result = res.data
             console.log(result);

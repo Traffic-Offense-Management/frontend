@@ -18,7 +18,7 @@ const OffenseRecords = (props) => {
     const [offenses, setOffenses] = useState([]);
 
     function generateChallan(fine_no) {
-        window.location.href = "http://localhost:8080/police/challan/" + fine_no
+        window.location.href = "http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/police/challan/" + fine_no
     }
 
     function filter(){
@@ -33,7 +33,7 @@ const OffenseRecords = (props) => {
                 break;
             }
         }
-        axios.get(`http://localhost:8080/police/offenses/10004?name_filter=${nameFilter}&place_filter=${placeFilter}&vehicle_no_filter=${vehicleNoFilter}&sort_by=${sortByCriteria}`)
+        axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/police/offenses/10004?name_filter=${nameFilter}&place_filter=${placeFilter}&vehicle_no_filter=${vehicleNoFilter}&sort_by=${sortByCriteria}`)
         .then(res => {
             setOffenses(res.data);
         });
@@ -46,7 +46,7 @@ const OffenseRecords = (props) => {
         if(!policeId){
             navigate('/police/login');
         }
-        axios.get(`http://localhost:8080/police/offenses/${policeId}`)
+        axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/police/offenses/${policeId}`)
         .then(res => {
             const offenses = res.data
             offenses.map(offense => {            
