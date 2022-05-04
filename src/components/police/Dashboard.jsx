@@ -20,7 +20,7 @@ const Dashboard = () => {
         if(!policeId){
             // navigate('/police/login');
         }
-        axios.get(`http://localhost:8080/police/${policeId}/dashboard`)
+        axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/police/${policeId}/dashboard`)
             .then(res => {
                 const dashboardDetails = res.data;
                 console.log(dashboardDetails);
@@ -49,8 +49,8 @@ const Dashboard = () => {
                         <div className='cards-title'>
                             Today
                         </div>
-                        <div className='cards'>
-                            <div className='card'>
+                        <div className='dashboard-cards'>
+                            <div className='dashboard-card'>
                                 <div className='fig'>
                                     <i className="bi bi-clock-history dashboard-icon"></i>
                                 </div>
@@ -60,7 +60,7 @@ const Dashboard = () => {
                                 </div>
                             </div>
 
-                            <div className='card'>
+                            <div className='dashboard-card'>
                                 <div className='fig'>
                                     <i className="fa fa-rupee dashboard-icon"></i>
                                 </div>
@@ -76,8 +76,8 @@ const Dashboard = () => {
                         <div className='cards-title'>
                             This month
                         </div>
-                        <div className='cards'>
-                            <div className='card'>
+                        <div className='dashboard-cards'>
+                            <div className='dashboard-card'>
                                 <div className='fig'>
                                     <i className="bi bi-clock-history dashboard-icon"></i>
                                 </div>
@@ -87,7 +87,7 @@ const Dashboard = () => {
                                 </div>
                             </div>
 
-                            <div className='card'>
+                            <div className='dashboard-card'>
                                 <div className='fig'>
                                     <i className="fa fa-rupee dashboard-icon"></i>
                                 </div>

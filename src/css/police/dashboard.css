@@ -20,13 +20,13 @@
 
 }
 
-.cards{
+.dashboard-cards{
     display: flex;
     flex-direction: row;
     margin: 0.5rem 0;
 }
 
-.card{
+.dashboard-card{
     display: flex;
     flex-direction: row;
     box-shadow: 5px 5px 10px #EEEEEE;

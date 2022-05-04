@@ -24,7 +24,7 @@ const PoliceLogin = () => {
             password : password
         }
         console.log(body);
-        axios.post('http://localhost:8080/police/auth', body)
+        axios.post('http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/police/auth', body)
             .then(response => {
                 console.log(response)
                 // alert('Login successful');
@@ -32,7 +32,7 @@ const PoliceLogin = () => {
                 sessionStorage.setItem('police_id', response.data.policeId);
                 console.log((sessionStorage.getItem('username')));  
                 console.log((sessionStorage.getItem('police_id')));  
-                navigate(`/police/profile`);
+                navigate(`/police/dashboard`);
             }).catch(err => {
                 alert('Invalid username or password');
                 console.log(err.message)

@@ -6,4 +6,4 @@
     npm ci
     npm start
 
-* In case no browser window opens, go to ```http://localhost:3000```
+* In case no browser window opens, go to ```http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:3000```

@@ -4,8 +4,8 @@
 }
 
 .form-control{
-    display: inline-block;
-    width: 20%;
+    display: inline-block !important;
+    width: 20% !important;
 }
 
 .form{
