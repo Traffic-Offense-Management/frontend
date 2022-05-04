@@ -2,7 +2,7 @@ import React from "react"
 import Navbar from "./js/navbar"
 import Sidebar from "./js/sidebar"
 import TableManager from "./js/tablehandler.js"
-import "./css/header.css"
+import "./css/header.scss"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 export default function App() {
@@ -20,6 +20,7 @@ export default function App() {
         setPageContent(() => 0);
     }
     return (
+        <div className="headeradmin">
         <div className="main">
             <Navbar menuClick={menuClick} homeClick = {homeClick} />
             <div className="bod">
@@ -29,6 +30,7 @@ export default function App() {
                 
             </div>
 
+        </div>
         </div>
     );
 }

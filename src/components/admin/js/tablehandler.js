@@ -1,7 +1,7 @@
 import React from "react"
 import Searchbar from "./search"
 import TableContainer from "./table.js"
-import "../css/header.css"
+import "../css/header.scss"
 import { Container } from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 import {columns, options} from "./list"
