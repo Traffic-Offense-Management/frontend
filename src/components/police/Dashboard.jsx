@@ -20,7 +20,7 @@ const Dashboard = () => {
         if(!policeId){
             // navigate('/police/login');
         }
-        axios.get(`http://localhost:8080/police/${policeId}/dashboard`)
+        axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/police/${policeId}/dashboard`)
             .then(res => {
                 const dashboardDetails = res.data;
                 console.log(dashboardDetails);

@@ -19,7 +19,7 @@ function PubHome() {
 
         const username = localStorage.getItem('username');
         console.log('police id ', username);
-        axios.get(`http://localhost:8080/user/${username}`)
+        axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/user/${username}`)
             .then(res => {
                 const userdetails = res.data[0]
                 console.log(userdetails.dob);

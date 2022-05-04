@@ -32,7 +32,7 @@ function Login() {
          console.log((localStorage.getItem('username'))); 
         navigate('/PuHo')
         // navigate('/PuHo');  
-        // axios.post('http://localhost:8080/police/auth', body)
+        // axios.post('http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/police/auth', body)
         //     .then(response => {
         //         console.log(response)
         //         // alert('Login successful');
