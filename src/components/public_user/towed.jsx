@@ -80,7 +80,8 @@ const Historye = (props) => {
                             <div className="name">Offense-no: {offense.offense_no}</div>
                             <div className="vehicle-no"><small>Fine-no: {offense.fine_no}</small></div>
                             <div className="offense-type">Offense Place: {offense.place}</div>
-                            <div className="name">Fine Amount: {offense.station_name}</div>
+                            <div className="offense-type">Offense Place: {offense.station_name}</div>
+                            <div className="name">Fine Amount: {offense.fine}</div>
                             
                         </div>
 
