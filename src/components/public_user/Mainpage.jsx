@@ -27,8 +27,12 @@ function Mainpage() {
 
                 <br />
 
-                <div className="pa">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A pariatur ipsum libero totam, debitis vel aliquid nesciunt nulla ut explicabo quasi praesentium rerum est soluta, laborum assumenda magni fugiat exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, pariatur mollitia quidem maxime excepturi voluptatum nihil in dolorum amet, enim tempora. Optio adipisci rerum, officiis labore, minima totam accusamus ut aspernatur pariatur dolore autem laborum libero nisi obcaecati porro cum!</div>
+                <div className="pa">
+                    This projet is done by students from NITK, Department of Computer Science, Abhishek, Amogh and Rakshith.
+                    <br/>
+                    This project is inspired by the traffic police department which works day in and out to ensure the safety of civilians on the road.
 
+                </div>
             </div>
         </div>
     )

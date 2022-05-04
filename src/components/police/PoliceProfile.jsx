@@ -20,7 +20,7 @@ const PoliceProfile = () => {
         policeId = sessionStorage.getItem('police_id');
         console.log('police id ', policeId);
         if(!policeId){
-            // navigate('/police/login');
+            navigate('/police/login');
         }
         axios.get(`http://localhost:8080/police/${policeId}`)
         .then(res => {

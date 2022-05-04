@@ -32,7 +32,7 @@ const PoliceLogin = () => {
                 sessionStorage.setItem('police_id', response.data.policeId);
                 console.log((sessionStorage.getItem('username')));  
                 console.log((sessionStorage.getItem('police_id')));  
-                navigate(`/police/profile`);
+                navigate(`/police/dashboard`);
             }).catch(err => {
                 alert('Invalid username or password');
                 console.log(err.message)
