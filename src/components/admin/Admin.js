@@ -18,7 +18,7 @@ export default function App() {
     }, [])
     function verifyToken() {
         if (token) {
-            axios.get('http://localhost:8080/admin/auth', {
+            axios.get('http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/admin/auth', {
                 headers: {
                     authorization: `${localStorage.getItem("token")}`
                 }

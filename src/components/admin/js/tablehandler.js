@@ -20,7 +20,7 @@ export default function TableManager(props) {
 
     React.useEffect(() => {
         if (s.current === '') {
-            axios.get(`http://localhost:8080/admin/${navpages[props.pageContent - 1]}`, {
+            axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/admin/${navpages[props.pageContent - 1]}`, {
                 headers: {
                     authorization: `${localStorage.getItem("token")}`
                 }
@@ -33,7 +33,7 @@ export default function TableManager(props) {
                 setData([]);
             })
         } else {
-            axios.post(`http://localhost:8080/admin/${navpages[props.pageContent - 1]}/options`, {
+            axios.post(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/admin/${navpages[props.pageContent - 1]}/options`, {
                 field: f.current,
                 text: s.current
             }, {

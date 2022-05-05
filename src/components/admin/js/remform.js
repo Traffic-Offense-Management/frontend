@@ -16,7 +16,7 @@ export default function RemForms(props) {
         })
     }
     function remValues(){
-        axios.post(`http://localhost:8080/admin/${navpages[props.pageContent - 1]}/rem`,formValues, {
+        axios.post(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/admin/${navpages[props.pageContent - 1]}/rem`,formValues, {
             headers: {
                 authorization: `${localStorage.getItem("token")}`
             }

@@ -84,11 +84,18 @@ function PubHome() {
                         </div>
 
                         <div className="box1">
-                            <div className="cap"> <Link to={'/CompPO'}>Complaint against Police Officer</Link></div>
-                            {/* <div className="cap" > <a href="#userd>Complaint against userdOfficer</a></div> */}
-                            <div className="mal"><Link to={'/Mal'}>Traffic System Malfunctions</Link></div>
-                            <div className="oth"><Link to={'/Historye'}>Find Your Vehicle if towed</Link></div>
-                            <div className="cap1"><Link to={'/History'}>Offense History</Link></div>
+                            <div className='histories'>
+                                <div className="topic"> <Link to={'/CompPO'}>Complaint against Police Officer</Link></div>
+                                {/* <div className="cap" > <a href="#userd>Complaint against userdOfficer</a></div> */}
+                                <div className="topic"><Link to={'/Mal'}>Traffic System Malfunctions</Link></div>
+                                <div className="topic"><Link to={'/Historye'}>Find Your Vehicle if towed</Link></div>
+                            </div>
+
+                            <div className='histories'>
+                                <div className="topic"><Link to={'/History'}>Offense History</Link></div>
+                                <div className="topic"><Link to={'/Complaints'}>Complaint History</Link></div>
+                            </div>
+
                         </div>
 
                         {/* <div className="box2">

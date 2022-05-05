@@ -1,0 +1,138 @@
+.r{
+  background-image: url('./t5.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+
+  .history{
+    display: flex;
+    flex-direction: row;
+  }
+
+  *{
+    /* background-color: #EEEEEE; */
+  }
+
+  .head{
+    color: black;
+    background-color: orange;
+    text-align: center;
+    font-size: 8vh;
+  }
+
+  .num-offenses{
+    padding: 0.6rem;
+    border-radius: 5px;
+    margin-bottom: 0.2rem;
+  }
+
+  .offense-history{
+    margin: 1rem;
+    flex-grow: 1;
+    border-radius: 10px;
+  }
+
+  .offense{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin-bottom: 0.7rem;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    align-items: center;
+  }
+
+  .fine-no{
+    min-width: 25%;
+    /* color: white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center !important;
+    /* clip-path: circle(40% at 50% 50%); */
+    /* background-color: #BDBDBD; */
+    font-size: x-large;
+    margin-right: 1rem;
+
+  }
+
+  i{
+    margin: 0.4rem;
+  }
+
+  .fine-no-circle{
+    display: inline-block;
+    align-items: center;
+    align-self: center;
+  }
+
+  .details{
+    max-width: 50%;
+    min-width: 50%;
+  }
+
+  .des{
+    max-width: 40%;
+    min-width: 30%;
+  }
+
+  .ti{
+    text-align: right;
+    padding-left: 2vh;
+  }
+
+  .place-time{
+    min-width: 25%;
+    max-width: 25%;
+  }
+
+  .challan{
+    margin: auto;
+    float: right !important;
+  }
+
+  .my-bg{
+    background-color: #EEEEEE;
+  }
+
+  .filter{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: white;
+  }
+
+  .no-records{
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+
+  }
+
+  .filter-field{
+    padding: 0.5rem 0;
+  }
+
+
+  .sort-by{
+    margin-top: 1rem;
+    padding: 1rem 0;
+  }
+
+  .criteria{
+    margin: 0.2rem;
+  }
+
+  .sort-label{
+    margin-left: 0.2rem;
+  }
+
+  .filter-header{
+    margin: 1rem 0;
+  }
+
+  .name{
+    display: flex;
+  }
+}

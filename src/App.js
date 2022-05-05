@@ -30,6 +30,7 @@ import CompPo from './components/public_user/comp';
 import Mal from './components/public_user/Mal';
 import History from './components/public_user/offenselist';
 import Historye from './components/public_user/towed';
+import ViewComplaints from "./components/public_user/view_complaints";
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
         <Route path='/mal' element={<Mal />} />
         <Route path='/Historye' element={<Historye />} />
         <Route path='/History' element={<History />} />
+        <Route path='/Complaints' element={<ViewComplaints />} />
 
 
 
