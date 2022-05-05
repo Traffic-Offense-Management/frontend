@@ -18,7 +18,7 @@ const Dashboard = () => {
         policeId = sessionStorage.getItem('police_id');
         console.log('police id ', policeId);
         if(!policeId){
-            // navigate('/police/login');
+            navigate('/police/login');
         }
         axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/police/${policeId}/dashboard`)
             .then(res => {

@@ -36,6 +36,8 @@ const OffenseRecords = (props) => {
         axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/police/offenses/10004?name_filter=${nameFilter}&place_filter=${placeFilter}&vehicle_no_filter=${vehicleNoFilter}&sort_by=${sortByCriteria}`)
         .then(res => {
             setOffenses(res.data);
+        }).catch(err => {
+            alert(err.response.data);
         });
     }
 

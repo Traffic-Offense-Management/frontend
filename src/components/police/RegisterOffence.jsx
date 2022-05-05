@@ -63,7 +63,7 @@ const RegisterOffence = () => {
 
             }).catch(err => {
                 console.log(err)
-                alert('Invalid complaint')
+                alert(err.response.data);
             });
     }
 

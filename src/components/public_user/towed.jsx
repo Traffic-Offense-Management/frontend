@@ -84,9 +84,9 @@ const Historye = (props) => {
                             
                         </div>
 
-                        <div className="des">Description: Parked in NO Parking</div>
+                        <div className="des">Description: {offense.description}</div>
 
-                        <div className="ti">Date Time: {offense.time.split('T')[0]}</div>
+                        <div className="ti">Date : {offense.time.split('T')[0]}</div>
 
                         {/* <div className="place-time">
                             <div className="place">
