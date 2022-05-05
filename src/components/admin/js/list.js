@@ -17,97 +17,127 @@ export const columns = [
     [
         {
             Header: "Police ID",
-            accessor: "name.title",
+            accessor: "police_id",
         },
         {
-            Header: "First Name",
-            accessor: "name.first",
+            Header: "Name",
+            accessor: "name",
         },
         {
-            Header: "Last Name",
-            accessor: "name.last",
+            Header: "Date of Birth",
+            accessor: "dob",
         },
         {
             Header: "Username",
-            accessor: "email",
+            accessor: "username",
         },
         {
             Header: "Station",
-            accessor: "location.city",
+            accessor: "station_id",
         },
     ],
     [
         {
             Header: "Station ID",
-            accessor: "sid",
+            accessor: "station_id",
         },
         {
             Header: "Station Name",
-            accessor: "sname",
+            accessor: "station_name",
         },
         {
             Header: "Station Address",
-            accessor: "saddress",
+            accessor: "station_address",
+        },
+        {
+            Header: "Pincode",
+            accessor: "pincode",
         },
     ],
     [
         {
             Header: "Complaint ID",
-            accessor: "cid",
+            accessor: "complaint_id",
         },
         {
             Header: "Description",
-            accessor: "cdesc",
+            accessor: "description",
+        },
+        {
+            Header: "Police ID",
+            accessor: "police_id",
         },
         {
             Header: "Date",
-            accessor: "cdate",
+            accessor: "date",
         }
     ],
     [
         {
             Header: "Fine ID",
-            accessor: "oid",
+            accessor: "fine_no",
         },
         {
             Header: "Name",
-            accessor: "oname",
+            accessor: "name",
         },
         {
-            Header: "Description",
-            accessor: "odesc",
+            Header: "Status",
+            accessor: "status",
         },
         {
             Header: "DL Number",
-            accessor: "odl",
+            accessor: "dl_no",
         },
         {
             Header: "Fine",
-            accessor: "ofine",
+            accessor: "fine",
         },
         {
             Header: "Place",
-            accessor: "oplace",
+            accessor: "place",
         },
         {
             Header: "Time",
-            accessor: "otime",
+            accessor: "time",
         }
     ],
     [
         {
-            Header: "Camera ID",
-            accessor: "cid",
+            Header: "User ID",
+            accessor: "userid",
         },
         {
-            Header: "Camera Location",
-            accessor: "clocation",
+            Header: "Pincode",
+            accessor: "pincode",
         },
         {
-            Header: "token",
-            accessor: "ctoken",
+            Header: "Problem",
+            accessor: "problem",
+        },
+        {
+            Header: "Description",
+            accessor: "descript",
+        },
+        {
+            Header: "Date",
+            accessor: "date",
         }
-    ]
+    ],
+    // [
+    //     {
+    //         Header: "Camera ID",
+    //         accessor: "cid",
+    //     },
+    //     {
+    //         Header: "Camera Location",
+    //         accessor: "clocation",
+    //     },
+    //     {
+    //         Header: "token",
+    //         accessor: "ctoken",
+    //     }
+    // ]
 ];
 
 export let navpages = [
@@ -116,7 +146,8 @@ export let navpages = [
     "Stations",
     "Complaints",
     "Offenses",
-    "Camera"
+    "Malfunction",
+    // "Camera"
 ];
 
 export let options = [
@@ -125,5 +156,24 @@ export let options = [
     2,
     1,
     1,
+    1,
     2
 ]
+
+export let add_forms = {
+    Authority: ["username", "password", "name", "position"],
+    Police: ["name", "dob", "username", "station_id", "address", "email", "phone_no", "password"],
+    Stations: ["station_name", "station_address", "pincode"],
+    Complaints: ["description", "police_id", "date", "station_id", "user_id"],
+    Offenses: ["name", "status", "dl_no", "vehicle_no","offense_no", "place", "date","time"],
+    Malfunction:["userid", "pincode", "problem", "descript","date"],
+    Camera: ["cid", "clocation", "ctoken"]
+    
+}
+
+export let delete_forms = {
+    Authority: ["username"],
+    Police: ["police_id"],
+    Stations: ["station_id"],
+    Camera: ["cid"],
+}

@@ -7,6 +7,7 @@
     margin-right: 0px;
     margin-left: 0px;
     box-shadow: 2px 2px 5px 5px rgba(57, 54, 54, 0.2);
+    overflow-y: scroll;
 }
 .main-cont{
     /* padding-left:250px; */

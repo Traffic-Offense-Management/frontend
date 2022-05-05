@@ -17,7 +17,8 @@ export default function Navbar(props) {
             <div className="left-blocks left-block-width nav-element nav-element-white" onClick={props.homeClick}><div className="center extra-center">Home</div></div>
             <div className="navbar-brand mx-auto"><center><h2>Admin</h2></center></div>
             <div className="nav-element settings nav-element-white"><img className="settings-image" src={gear} alt="gear" /></div>
-            <div className="logout nav-element nav-element-dark "><div className="center extra-center">Logout</div></div>
+            <div className="logout nav-element nav-element-dark "><div className="center extra-center" onClick={()=>{localStorage.removeItem("token");window.location.reload();}}>Logout</div></div>
+            
 
         </nav>
         </div>

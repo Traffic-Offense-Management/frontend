@@ -1,0 +1,12 @@
+.admin-login-text{
+    margin:30px;
+}
+
+.admin-form-text{
+    margin-right: 10px !important;
+}
+.login-error-box{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: red;
+}
