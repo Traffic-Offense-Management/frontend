@@ -60,9 +60,9 @@ function Login() {
                     
                     {/* <Link to="/PuHo"><button className='but' type="submit">Login</button></Link> */}
 
-                    <input type="submit" value={'Submit'} name="" id="" />
+                    <input type="submit" className="btn btn-danger submit-btn" value={'Submit'} name="" id="" />
 
-                    <div className="for">Forgot password?Click here</div>
+                    {/*<div className="for">Forgot password?Click here</div>*/}
                 </form>
             </div>
         </div>

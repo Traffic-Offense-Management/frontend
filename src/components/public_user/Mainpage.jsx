@@ -28,10 +28,9 @@ function Mainpage() {
                 <br />
 
                 <div className="pa">
-                    This projet is done by students from NITK, Department of Computer Science, Abhishek, Amogh and Rakshith.
+                    This project is developed by the students of NITK Surathkal, Abhishek, Amogh and Rakshith as a part of the course project for Database Systems.
                     <br/>
-                    This project is inspired by the traffic police department which works day in and out to ensure the safety of civilians on the road.
-
+                    with the aim to make traffic offense management simple and transparent for the public as well as the traffic police officers.
                 </div>
             </div>
         </div>

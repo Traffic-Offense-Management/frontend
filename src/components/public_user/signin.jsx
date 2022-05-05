@@ -32,17 +32,17 @@ function Singin() {
         axios.post('http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/user/new',body)
         .then(res=>{
             console.log(res);
-            alert("Successful!")
+            alert("Successful!");
+            navigate('/PuHo')
 
         })
         .catch(err=>{
-            alert("Invalid details hi")
+            alert("Invalid details")
         })
 
         localStorage.setItem('username', username);
                 // localStorage.setItem('police_id', response.data.policeId);
-         console.log((localStorage.getItem('username'))); 
-        navigate('/PuHo')
+         console.log((localStorage.getItem('username')));
 
         
     }

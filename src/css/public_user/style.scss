@@ -1,9 +1,13 @@
 div.MainpageStyle {
 
-    background-image: url('./traf.jpg');
+    background-image: url('./traf_blur.jpg');
+    // opacity: 0.8;
+//     filter: blur(8px);
+//   -webkit-filter: blur(8px);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    
 
     li {
         list-style-type: none;

@@ -1,4 +1,8 @@
 .q{
+    background-image: url('./t5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
 
     .history{
@@ -64,8 +68,8 @@
     }
     
     .details{
-        max-width: 45%;
-        min-width: 25%;
+        max-width: 50%;
+        min-width: 30%;
     }
     
     .des{

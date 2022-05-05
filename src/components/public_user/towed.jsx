@@ -53,7 +53,7 @@ const Historye = (props) => {
             <div className='history'>
                 {/* <Menu selected='history'/> */}
                 <div className='offense-history'>
-                <div className='num-offenses bg-primary text-white'>
+                <div className='num-offenses bg-light '>
                     {offenses.length > 0 ? offenses.length : "No"} record(s) found
                 </div>
                 {offenses.length > 0 ? offenses.map(offense => {
@@ -80,13 +80,14 @@ const Historye = (props) => {
                             <div className="name">Offense-no: {offense.offense_no}</div>
                             <div className="vehicle-no"><small>Fine-no: {offense.fine_no}</small></div>
                             <div className="offense-type">Offense Place: {offense.place}</div>
-                            <div className="name">Fine Amount: {offense.station_name}</div>
+                            <div className="offense-type">Offense Place: {offense.station_name}</div>
+                            <div className="name">Fine Amount: {offense.fine}</div>
                             
                         </div>
 
                         <div className="des">Description: Parked in NO Parking</div>
 
-                        <div className="ti">Date-Time: {offense.time}</div>
+                        <div className="ti">Date Time: {offense.time.split('T')[0] + ' ' + offense.time.split('T')[1]}</div>
 
                         {/* <div className="place-time">
                             <div className="place">
