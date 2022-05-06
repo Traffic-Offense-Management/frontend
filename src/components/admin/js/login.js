@@ -8,7 +8,7 @@ export default function Login(props){
     const [errorText, setErrorText] = React.useState("username or password is incorrect");
     function loginAdmin(){
         console.log("trying")
-        axios.post('http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/admin/login',{
+        axios.post(`http:${props.selfurl}:8080/admin/login`,{
             username: username,
             password: password
         }).then(res => {

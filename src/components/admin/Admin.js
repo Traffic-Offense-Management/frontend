@@ -10,15 +10,17 @@ import axios from "axios"
 export default function App() {
     const [token, setToken] = React.useState(localStorage.getItem("token"))
     const [menuCollapsedStatus, setMenuCollapsedStatus] = React.useState(false);
-    const [pageContent, setPageContent] = React.useState(0);
+    const [pageContent, setPageContent] = React.useState(1);
     const [loggedIn, setLoggedIn] = React.useState(false);
+    //change host url here
+    const [selfurl, setSelfurl] = React.useState("//localhost");
     // pageContent: 0 = landing, 1 = Police, 2 = Stations, 3 = Complaints, 4 = Offenses, 5 = Camera
     React.useEffect(() => {
         verifyToken();
     }, [])
     function verifyToken() {
         if (token) {
-            axios.get('http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/admin/auth', {
+            axios.get(`http:${selfurl}:8080/admin/auth`, {
                 headers: {
                     authorization: `${localStorage.getItem("token")}`
                 }
@@ -62,10 +64,10 @@ return loggedIn ? (
         <div className="bod">
 
             <Sidebar menuClick={menuClick} menuCollapsedStatus={menuCollapsedStatus} pageContent={pageContent} setContent={setContent} />
-            <TableManager menuCollapsedStatus={menuCollapsedStatus} pageContent={pageContent} />
+            <TableManager menuCollapsedStatus={menuCollapsedStatus} pageContent={pageContent} selfurl = {selfurl} setPageContent={setPageContent} />
 
         </div>
 
     </div>
-) : <Login setToken={setToken} setLoggedIn = {setLoggedIn}/>;
+) : <Login setToken={setToken} setLoggedIn = {setLoggedIn} selfurl={selfurl} />;
 }
