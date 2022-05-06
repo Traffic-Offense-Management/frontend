@@ -64,6 +64,10 @@ export const columns = [
             accessor: "description",
         },
         {
+            Header: "Status",
+            accessor: "status",
+        },
+        {
             Header: "Police ID",
             accessor: "police_id",
         },
@@ -164,7 +168,7 @@ export let add_forms = {
     Authority: ["username", "password", "name", "position"],
     Police: ["name", "dob", "username", "station_id", "address", "email", "phone_no", "password"],
     Stations: ["station_name", "station_address", "pincode"],
-    Complaints: ["description", "police_id", "date", "station_id", "user_id"],
+    Complaints: ["description", "status","police_id", "date", "station_id", "user_id"],
     Offenses: ["name", "status", "dl_no", "vehicle_no","offense_no", "place", "date","time"],
     Malfunction:["userid", "pincode", "problem", "descript","date"],
     Camera: ["cid", "clocation", "ctoken"]

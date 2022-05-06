@@ -16,7 +16,7 @@ export default function RemForms(props) {
         })
     }
     function remValues(){
-        axios.post(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/admin/${navpages[props.pageContent - 1]}/rem`,formValues, {
+        axios.post(`http:${props.selfurl}:8080/admin/${navpages[props.pageContent - 1]}/rem`,formValues, {
             headers: {
                 authorization: `${localStorage.getItem("token")}`
             }
@@ -27,25 +27,41 @@ export default function RemForms(props) {
             setIsError(true);
         })
         props.setForm(0);
+        props.setLoad(prev=>!prev);
     }
     let form = delete_forms[navpages[props.pageContent - 1]];
-    let form_items = form.map((item, index) => <div key = {index} className='form-group'><label style={{marginRight: "10px"}}>{item}</label><input type="text" className='form-control' onChange={(event) => handleChange(event, item)}/></div>);
+    
+    let form_items = form.map((item, index) => <tr key = {index}><td><label style={{marginRight: "10px", width:"15vh", textAlign:"right" }}>{item}</label></td><td><input type="text" className='form-control' onChange={(event) => handleChange(event, item)}/></td></tr>);
+    let itemTable = [];
+    for(let i = 0; i < form_items.length; i+=2){
+        if(i<form_items.length){
+            itemTable.push(<tr key={i}><td>{form_items[i]}</td><td><div style={{width:"30px"}} ></div></td><td>{form_items[i+1]}</td></tr>);
+        }else{
+            itemTable.push(<tr key={i}><td>{form_items[i]}</td><td></td><td></td></tr>);
+        }
+    }
+
     return (
-        <div id="addform" style={{ paddingLeft: "250px", transition: "0.35s" }}>
+        <center>
+        <div id="addform" style={{transition: "0.35s" }}>
             <form>
                 <div className="form-header">
                     <h1>Remove {navpages[props.pageContent - 1]}</h1>
                 </div>
+                <br></br>
                 <div className="">
-                    {form_items}
+                    <table>{form_items}</table>
+                    
                 </div>
                 <div className='login-error-box' style={{display:isError?"block":"none"}}>
                     Enter correct value
                 </div>
+                <br></br>
                 <div className="form-footer">
                     <button type = 'button' className="btn btn-primary" onClick={remValues}>Remove</button>
                 </div>
             </form>
         </div>
+        </center>
     );
 }

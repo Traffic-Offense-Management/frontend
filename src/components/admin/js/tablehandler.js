@@ -13,19 +13,34 @@ export default function TableManager(props) {
     const [searchField, setSearchField] = React.useState();
     const [searchText, setSearchText] = React.useState("");
     const [form, setForm] = React.useState(0);
+    const [load, setLoad] = React.useState(false);
     let s = React.useRef();
     s.current = searchText;
+    let l = React.useRef();
+    l.current = form;
     let f = React.useRef();
     f.current = searchField;
+    React.useEffect(() => {
+        setForm(0);
+    }, [props.pageContent]);
 
     React.useEffect(() => {
         if (s.current === '') {
-            axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/admin/${navpages[props.pageContent - 1]}`, {
+            axios.get(`http:${props.selfurl}:8080/admin/${navpages[props.pageContent - 1]}`, {
                 headers: {
                     authorization: `${localStorage.getItem("token")}`
                 }
             }).then(res => {
-
+                if(res.data[0].date){
+                    for(let i = 0; i<res.data.length; i++){
+                        res.data[i].date = res.data[i].date.split("T")[0];
+                    }
+                }else if(res.data[0].dob){
+                    for(let i = 0; i<res.data.length; i++){
+                        res.data[i].dob = res.data[i].dob.split("T")[0];
+                    }
+                    
+                }
                 setData(res.data);
                 console.log(JSON.stringify(data))
             }).catch(error => {
@@ -33,7 +48,7 @@ export default function TableManager(props) {
                 setData([]);
             })
         } else {
-            axios.post(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/admin/${navpages[props.pageContent - 1]}/options`, {
+            axios.post(`http:${props.selfurl}:8080/admin/${navpages[props.pageContent - 1]}/options`, {
                 field: f.current,
                 text: s.current
             }, {
@@ -50,7 +65,7 @@ export default function TableManager(props) {
             })
 
         }
-    }, [props.pageContent, s.current])
+    }, [props.pageContent, s.current, l.current])
 
 
 
@@ -64,19 +79,19 @@ export default function TableManager(props) {
 
     let add = (
 
-                <AddForm pageContent={props.pageContent} setForm={setForm} />
+                <AddForm pageContent={props.pageContent} setForm={setForm} selfurl={props.selfurl} setLoad= {setLoad}/>
 
     );
     let del = (
         
-                <RemForm pageContent={props.pageContent} setForm={setForm} />
+                <RemForm pageContent={props.pageContent} setForm={setForm} selfurl={props.selfurl} setLoad= {setLoad} />
             
     );
     if (props.pageContent === 0) {
         return (<div></div>)
     } else {
-        return (
-            <div id="table" className="main-cont" style={{ paddingLeft: `${pad}px`, transition: "0.35s" }}>
+        return (            
+            <div className="main-cont" style={{ paddingLeft: `${pad}px`, transition: "0.35s" }}>
             <Searchbar searchText={searchText} searchField={searchField} setSearchField={setSearchField} setSearchText={setSearchText} columns={columns[props.pageContent - 1]} pageContent={props.pageContent} options={options[props.pageContent - 1]} form = {form} setForm={setForm} />
             <Container className="table-cont">
                 {form === 0 ? table : form === 1 ? add : del}
