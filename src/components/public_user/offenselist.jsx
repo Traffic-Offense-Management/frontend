@@ -18,12 +18,12 @@ const History = (props) => {
     const [offenses, setOffenses] = useState([]);
 
     // function generateChallan(fine_no) {
-    //     window.location.href = "http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/police/challan/" + fine_no
+    //     window.location.href = "http://localhost:8080/police/challan/" + fine_no
     // }
 
     // function filter(){
         
-    //     axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/police/offenses/user/${username}`)
+    //     axios.get(`http://localhost:8080/police/offenses/user/${username}`)
     //     .then(res => {
     //         setOffenses(res.data);
     //     });
@@ -35,7 +35,7 @@ const History = (props) => {
         // vehicle_no = localStorage.getItem('police_id');
         console.log('police id ', username);
         
-        axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/offenses/user/${username}`)
+        axios.get(`http://localhost:8080/offenses/user/${username}`)
         .then(res => {
             const offenses = res.data
             offenses.map(offense => {            

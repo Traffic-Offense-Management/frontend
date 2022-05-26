@@ -24,7 +24,7 @@ import Admin from "./components/admin/Admin";
 import Login from './components/public_user/Login';
 import Mainpage from './components/public_user/Mainpage';
 import Role from './components/public_user/roles';
-import Signin from './components/public_user/signin';
+import Signin from './components/public_user/signup';
 import PubHome from './components/public_user/PublicHome';
 import CompPo from './components/public_user/comp';
 import Mal from './components/public_user/Mal';

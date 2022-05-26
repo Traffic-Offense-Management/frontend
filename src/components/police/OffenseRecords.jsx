@@ -3,7 +3,7 @@ import React, { Component, useEffect, useState } from 'react';
 import {useHistory, useNavigate} from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import Menu from './Menu';
-import '../../css/police/offense-history.css'
+import '../../css/police/offense-history.scss'
 import Header from "./Header";
 
 
@@ -18,7 +18,7 @@ const OffenseRecords = (props) => {
     const [offenses, setOffenses] = useState([]);
 
     function generateChallan(fine_no) {
-        window.location.href = "http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/police/challan/" + fine_no
+        window.location.href = "http://localhost:8080/police/challan/" + fine_no
     }
 
     function filter(){
@@ -33,7 +33,7 @@ const OffenseRecords = (props) => {
                 break;
             }
         }
-        axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/police/offenses/10004?name_filter=${nameFilter}&place_filter=${placeFilter}&vehicle_no_filter=${vehicleNoFilter}&sort_by=${sortByCriteria}`)
+        axios.get(`http://localhost:8080/police/offenses/10004?name_filter=${nameFilter}&place_filter=${placeFilter}&vehicle_no_filter=${vehicleNoFilter}&sort_by=${sortByCriteria}`)
         .then(res => {
             setOffenses(res.data);
         }).catch(err => {
@@ -48,7 +48,7 @@ const OffenseRecords = (props) => {
         if(!policeId){
             navigate('/police/login');
         }
-        axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/police/offenses/${policeId}`)
+        axios.get(`http://localhost:8080/police/offenses/${policeId}`)
         .then(res => {
             const offenses = res.data
             offenses.map(offense => {            
@@ -59,7 +59,7 @@ const OffenseRecords = (props) => {
     }, []);
 
     return (
-        <div className=''>
+        <div className='police-offense-history'>
             <Header></Header>
             <div className='history'>
                 <Menu selected='history'/>

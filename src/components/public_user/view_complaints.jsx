@@ -18,12 +18,12 @@ const ViewComplaints = (props) => {
     const [complaints, setComplaints] = useState([]);
 
     // function generateChallan(fine_no) {
-    //     window.location.href = "http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/police/challan/" + fine_no
+    //     window.location.href = "http://localhost:8080/police/challan/" + fine_no
     // }
 
     // function filter(){
 
-    //     axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/police/complaints/user/${username}`)
+    //     axios.get(`http://localhost:8080/police/complaints/user/${username}`)
     //     .then(res => {
     //         setcomplaints(res.data);
     //     });
@@ -35,7 +35,7 @@ const ViewComplaints = (props) => {
         // vehicle_no = localStorage.getItem('police_id');
         console.log('police id ', username);
         console.log('Fetching complaints');
-        axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/user/complaints/${username}`)
+        axios.get(`http://localhost:8080/user/complaints/${username}`)
             .then(res => {
                 const complaints = res.data
                 complaints.map(complaint => {

@@ -8,7 +8,7 @@ const Stations = () => {
     const [policeStations, setPoliceStations] = useState([]);
 
     useEffect(() => {
-    axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/policestations`)
+    axios.get(`http://localhost:8080/policestations`)
         .then(res => {
             const result = res.data
             console.log(result);

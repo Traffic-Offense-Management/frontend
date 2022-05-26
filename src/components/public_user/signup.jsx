@@ -29,7 +29,7 @@ function Singin() {
         }
         console.log(body);  
 
-        axios.post('http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/user/new',body)
+        axios.post('http://localhost:8080/user/new',body)
         .then(res=>{
             console.log(res);
             alert("Successful!");
@@ -37,7 +37,7 @@ function Singin() {
 
         })
         .catch(err=>{
-            alert("Invalid details")
+            alert("Invalid details. Make sure DL No and Vehicle No are correct")
         })
 
         localStorage.setItem('username', username);

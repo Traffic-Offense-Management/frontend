@@ -54,7 +54,7 @@ const Towing = () => {
             time : getDate() + ' ' +  getTime()
         }
         console.log(body);
-        axios.post('http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/police/towing/new', body)
+        axios.post('http://localhost:8080/police/towing/new', body)
             .then(response => {
                 console.log(response)
                 alert('Towing offense successfully registered')

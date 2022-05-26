@@ -13,7 +13,7 @@ export default function App() {
     const [pageContent, setPageContent] = React.useState(1);
     const [loggedIn, setLoggedIn] = React.useState(false);
     //change host url here
-    const [selfurl, setSelfurl] = React.useState("//ec2-65-2-146-200.ap-south-1.compute.amazonaws.com");
+    const [selfurl, setSelfurl] = React.useState("//localhost");
     // pageContent: 0 = landing, 1 = Police, 2 = Stations, 3 = Complaints, 4 = Offenses, 5 = Camera
     React.useEffect(() => {
         verifyToken();

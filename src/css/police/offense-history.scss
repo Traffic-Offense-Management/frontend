@@ -1,138 +1,111 @@
-.q{
-    background-image: url('./t5.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
+.police-offense-history{
 
     .history{
         display: flex;
         flex-direction: row;
     }
-    
-    *{
-        /* background-color: #EEEEEE; */
-    }
-    
-    .head{
-        color: black;
-        background-color: orange;
-        text-align: center;
-        font-size: 8vh;
-    }
-    
+
     .num-offenses{
         padding: 0.6rem;
         border-radius: 5px;
         margin-bottom: 0.2rem;
     }
-    
+
     .offense-history{
         margin: 1rem;
         flex-grow: 1;
         border-radius: 10px;
     }
-    
+
     .offense{
         display: flex;
         flex-direction: row;
         background-color: white;
         margin-bottom: 0.7rem;
-        padding: 1.5rem;
+        padding: 0.8rem;
         border-radius: 0.5rem;
         align-items: center;
-    }
-    
-    .fine-no{
-        min-width: 25%;
-        /* color: white; */
-        display: flex;
-        flex-direction: column;
-        /* clip-path: circle(40% at 50% 50%); */
-        /* background-color: #BDBDBD; */
-        font-size: medium;
-        margin-right: 1rem;
-    
+        border: 2px solid #EEEEEE;
     }
 
-    .fine-amt{
+    .fine-no{
+        min-width: 5%;
+        /* color: white; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center !important;
+        /* clip-path: circle(40% at 50% 50%); */
+        /* background-color: #BDBDBD; */
         font-size: x-large;
+        margin-right: 1rem;
     }
-    
+
     i{
         margin: 0.4rem;
     }
-    
+
     .fine-no-circle{
+        display: flex;
     }
-    
+
     .details{
-        max-width: 50%;
-        min-width: 30%;
+        max-width: 45%;
+        min-width: 45%;
     }
-    
-    .des{
-        max-width: 50%;
-        min-width: 30%;
-    }
-    
-    .ti{
-        text-align: left;
-        padding-left: 0vh;
-        min-width: 15%;
-    }
-    
+
     .place-time{
         min-width: 25%;
         max-width: 25%;
     }
-    
+
     .challan{
         margin: auto;
         float: right !important;
     }
-    
+
     .my-bg{
         background-color: #EEEEEE;
     }
-    
+
     .filter{
-        margin: 1rem;
-        padding: 1rem;
+        margin: 0 1rem;
+        padding: 2rem 1.5rem;
         background-color: white;
+        border-left: 2px solid #EEEEEE;
     }
-    
+
     .no-records{
         width: 100%;
         background-color: white;
         padding: 1rem;
         text-align: center;
-    
+
     }
-    
+
     .filter-field{
         padding: 0.5rem 0;
     }
-    
-    
+
+
     .sort-by{
         margin-top: 1rem;
         padding: 1rem 0;
     }
-    
+
     .criteria{
         margin: 0.2rem;
     }
-    
+
     .sort-label{
         margin-left: 0.2rem;
     }
-    
+
     .filter-header{
         margin: 1rem 0;
     }
-    
-    .name{
-        display: flex;
+
+    .filter-input{
+        /*padding: 0.3rem;*/
     }
 }

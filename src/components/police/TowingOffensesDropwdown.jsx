@@ -19,7 +19,7 @@ const TowingOffensesDropdown = () => {
         if(!policeId){
             navigate('/police/login');
         }
-        axios.get(`http://ec2-65-2-146-200.ap-south-1.compute.amazonaws.com:8080/towing_offenses`)
+        axios.get(`http://localhost:8080/towing_offenses`)
             .then(res => {
                 const result = res.data
                 console.log(result);
